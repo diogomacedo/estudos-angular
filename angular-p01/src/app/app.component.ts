@@ -54,4 +54,8 @@ export class AppComponent {
     return JSON.parse(JSON.stringify(this.novoContato));
   }
 
+  visualizar(item: Card) {
+    console.log('Card: ', item);
+  }
+
 }

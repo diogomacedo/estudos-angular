@@ -15,9 +15,9 @@
   </div>
 
   <div class="cards">
-    <app-card [card]="cards[0]"></app-card>
-    <app-card [card]="cards[1]"></app-card>
-    <app-card [card]="cards[2]"></app-card>
+    <app-card [card]="cards[0]" (capturar)="visualizar($event)"></app-card>
+    <app-card [card]="cards[1]" (capturar)="visualizar($event)"></app-card>
+    <app-card [card]="cards[2]" (capturar)="visualizar($event)"></app-card>
   </div>
 
 </div>
