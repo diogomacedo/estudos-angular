@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Card } from './models/card';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  cards: Card[] = [
+    {
+      title: 'Arroz',
+      description: 'Adoro arroz com legumes! Pode ser cenoura, vagem, ervilha, milho verde... whatever.'
+    },
+    {
+      title: 'Feijão',
+      description: 'Eu gosto de feijão bem basiquinho, com bastante caldo e pouco tempero.'
+    },
+    {
+      title: 'Macarrão',
+      description: 'Eu gosto de macarrão com molho pomodoro com muito manjericão e parmesão'
+    }
+  ];
 
   novoContato = {
     nome: '',
