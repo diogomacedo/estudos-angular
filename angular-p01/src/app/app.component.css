@@ -8,21 +8,24 @@ ul > li {
   list-style-type: none;
 }
 
+hr {
+  margin: 20px 0px 5px;
+}
+
 .form {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   max-width: 400px;
 }
 
 .form > label {
   display: flex;
   flex-direction: column;
-  margin: 10px 0px 0px;
+  margin: 10px;
 }
 
 .form > button {
-  margin-top: 10px;
-  padding: 5px;
+  padding: 0px 20px 0px;
 }
 
 .cards {

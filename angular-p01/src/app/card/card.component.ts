@@ -14,6 +14,9 @@ export class CardComponent implements OnInit {
     description: ''
   };
 
+  @Input()
+  index: number = 0;
+
   @Output('capturar')
   eventEmitter = new EventEmitter<Card>();
 

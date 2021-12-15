@@ -1,23 +1,19 @@
 <div class="container">
 
+  <div class="cards">
+    <app-card [card]="card" [index]="i + 1" (capturar)="visualizar($event)"
+      *ngFor="let card of cards; index as i"></app-card>
+  </div>
+
+  <hr />
+
   <form>
     <div class="form">
-      <label>Nome: <input type="text" name="nome" [(ngModel)]="novoContato.nome"/></label>
-      <label>Email: <input type="email" name="email" [(ngModel)]="novoContato.email" /></label>
-      <button type="button" (click)="salvarContato()">Salvar</button>
+      <label>Titulo: <input type="text" name="title" [(ngModel)]="novoCard.title"/></label><br/>
+      <label>Descrição: <textarea name="description" [(ngModel)]="novoCard.description"></textarea></label><br/>
+      <label>Imagem: <input type="text" name="imageUrl" [(ngModel)]="novoCard.imageUrl"></label><br/>
+      <button type="button" (click)="salvar()">Salvar</button>
     </div>
   </form>
-
-  <div *ngFor="let contato of contatos">
-    <ul>
-      <li>{{ contato.nome }} - {{ contato.email }} <a href="#" (click)="removerContato(contato)">excluir</a> </li>
-    </ul>
-  </div>
-
-  <div class="cards">
-    <app-card [card]="cards[0]" (capturar)="visualizar($event)"></app-card>
-    <app-card [card]="cards[1]" (capturar)="visualizar($event)"></app-card>
-    <app-card [card]="cards[2]" (capturar)="visualizar($event)"></app-card>
-  </div>
 
 </div>
