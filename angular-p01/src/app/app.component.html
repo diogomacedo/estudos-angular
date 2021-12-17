@@ -1,19 +1,33 @@
 <div class="container">
 
-  <div class="cards">
-    <app-card [card]="card" [index]="i + 1" (capturar)="visualizar($event)"
-      *ngFor="let card of cards; index as i"></app-card>
+  <div class="d-flex flex-row gap-3">
+
+    <section class="col-3">
+      <form class="my-3">
+        <div class="mb-3">
+          <label class="form-label">Titulo:</label>
+          <input type="text" name="title" [(ngModel)]="novoCard.title" class="form-control"/>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Descrição:</label>
+          <textarea name="description" [(ngModel)]="novoCard.description" class="form-control"></textarea>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Imagem:</label>
+          <input type="text" name="imageUrl" [(ngModel)]="novoCard.imageUrl" class="form-control">
+        </div>
+        <div>
+          <button type="button" (click)="salvar()" class="btn btn-primary">Salvar</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="col-9">
+      <div class="cards">
+        <app-card [card]="card" [index]="i + 1" *ngFor="let card of cards; index as i"></app-card>
+      </div>
+    </section>
+
   </div>
-
-  <hr />
-
-  <form>
-    <div class="form">
-      <label>Titulo: <input type="text" name="title" [(ngModel)]="novoCard.title"/></label><br/>
-      <label>Descrição: <textarea name="description" [(ngModel)]="novoCard.description"></textarea></label><br/>
-      <label>Imagem: <input type="text" name="imageUrl" [(ngModel)]="novoCard.imageUrl"></label><br/>
-      <button type="button" (click)="salvar()">Salvar</button>
-    </div>
-  </form>
 
 </div>

@@ -17,16 +17,9 @@ export class CardComponent implements OnInit {
   @Input()
   index: number = 0;
 
-  @Output('capturar')
-  eventEmitter = new EventEmitter<Card>();
-
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  selecionar() {
-    this.eventEmitter.emit(this.card);
   }
 
 }

@@ -1,35 +1,5 @@
-ul {
-  margin-top: 10px;
-}
-
-ul > li {
-  display: block;
-  font-size: 0.85em;
-  list-style-type: none;
-}
-
-hr {
-  margin: 20px 0px 5px;
-}
-
-.form {
-  display: flex;
-  flex-direction: row;
-  max-width: 400px;
-}
-
-.form > label {
-  display: flex;
-  flex-direction: column;
-  margin: 10px;
-}
-
-.form > button {
-  padding: 0px 20px 0px;
-}
-
 .cards {
-  display: flex;
-  flex-direction: row;
-  margin: 10px 0px 0px;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
 }
