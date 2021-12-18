@@ -17,7 +17,7 @@
           <input type="text" name="imageUrl" [(ngModel)]="novoCard.imageUrl" class="form-control">
         </div>
         <div>
-          <button type="button" (click)="salvar()" class="btn btn-primary">Salvar</button>
+          <button type="button" (click)="salvar()" class="btn btn-primary" [disabled]="desabilitarSalvar()">Salvar</button>
         </div>
       </form>
     </section>

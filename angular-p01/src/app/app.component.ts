@@ -58,4 +58,13 @@ export class AppComponent {
     console.log('Card: ', item);
   }
 
+  desabilitarSalvar() {
+    let result =
+      this.novoCard.title === undefined || this.novoCard.title === '' ||
+      this.novoCard.description === undefined || this.novoCard.description === '' ||
+      this.novoCard.imageUrl === undefined || this.novoCard.imageUrl === '';
+      console.log(result);
+      return result;
+  }
+
 }
